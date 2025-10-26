@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Si Joki Cepat — Jasa Joki Tugas</title>
+  <meta name="description" content="Si Joki Cepat - Jasa pengetikan makalah, pembuatan PPT, pengolahan data, dan laporan keuangan. Pesan cepat via WhatsApp."/>
+  <!-- Styles -->
+  <style>
+    :root{
+      --bg: #f7f9fb;
+      --card: #ffffff;
+      --accent: #4a90e2;      /* biru utama */
+      --muted: #6b7280;
+      --radius: 12px;
+      --glass: rgba(255,255,255,0.6);
+      --shadow: 0 8px 30px rgba(16,24,40,0.06);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:#0f172a;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    /* Container */
+    .container{max-width:1100px;margin:0 auto;padding:28px;}
+    /* Header / nav */
+    header{
+      background:transparent;
+      padding:18px 0;
+      position:sticky;
+      top:0;
+      z-index:40;
+      backdrop-filter: blur(6px);
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:12px;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{height:46px;width:auto;display:block}
+    .brand .title{font-weight:700;color:var(--accent);font-size:18px}
+    nav a{color:#0f172a;text-decoration:none;margin-left:18px;font-weight:600}
+    .cta{
+      background:linear-gradient(90deg,var(--accent),#66b0ff);
+      color:white;padding:10px 14px;border-radius:10px;border:0;font-weight:700;cursor:pointer;
+      box-shadow: 0 6px 20px rgba(74,144,226,0.18);
+      transition:transform .18s ease,opacity .18s ease;
+      text-decoration:none;
+    }
+    .cta:hover{transform:translateY(-3px);opacity:.98}
+    /* Hero */
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap:28px;
+      align-items:center;
+      margin-top:18px;
+      padding:34px;
+      border-radius:16px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.75));
+      box-shadow: var(--shadow);
+    }
+    .hero-left h1{
+      font-size:30px;
+      margin:0 0 12px 0;
+      color:#0b254a;
+    }
+    .hero-left p{margin:0 0 18px 0;color:var(--muted);font-size:16px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-primary{background:var(--accent);color:white;padding:12px 18px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+    .btn-outline{background:transparent;border:1px solid #e6eefc;color:var(--accent);padding:10px 16px;border-radius:10px;cursor:pointer}
+    .hero-right{display:flex;justify-content:center;align-items:center}
+    .hero-illus{
+      width:360px;height:220px;border-radius:12px;background:
+      linear-gradient(135deg, rgba(74,144,226,0.07), rgba(102,176,255,0.06));
+      display:flex;justify-content:center;align-items:center;
+      border:1px solid rgba(74,144,226,0.06);
+    }
+    .hero-illus img{max-width:80%;max-height:80%;opacity:0.95}
+    /* Services */
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:28px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow);border:1px solid rgba(15,23,42,0.03)}
+    .card h3{margin:0 0 8px 0;color:#0b254a}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .card .price{margin-top:10px;font-weight:700;color:var(--accent)}
+    /* Why choose */
+    .why{display:flex;gap:18px;margin-top:24px;align-items:stretch}
+    .why .item{flex:1;padding:18px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfdff);box-shadow:var(--shadow);text-align:center}
+    .why .item h4{margin:8px 0;color:#0b254a}
+    .why .item p{color:var(--muted);font-size:14px}
+    /* Form */
+    #order-section{margin-top:30px}
+    form{display:grid;gap:10px}
+    input[type="text"], input[type="tel"], textarea, select{
+      padding:12px;border-radius:10px;border:1px solid #e6eefc;background:#fff;font-size:15px;
+    }
+    textarea{min-height:120px;resize:vertical}
+    .submit-row{display:flex;gap:12px;align-items:center}
+    .submit-row .small-note{color:var(--muted);font-size:13px}
+    /* Testimonials */
+    .testi{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:22px}
+    .testi .t{padding:14px;border-radius:10px;background:#fff;border:1px solid rgba(15,23,42,0.03);box-shadow:var(--shadow)}
+    .t p{font-style:italic;color:var(--muted);margin-bottom:8px}
+    .t span{font-weight:700;color:var(--accent);font-size:14px}
+    /* Footer */
+    footer{margin-top:36px;padding:24px;text-align:center;color:#6b7280;font-size:14px}
+    /* Floating WA button */
+    .wa-fab{
+      position:fixed;right:18px;bottom:18px;background:linear-gradient(90deg,var(--accent),#66b0ff);
+      width:56px;height:56px;border-radius:999px;display:flex;align-items:center;justify-content:center;
+      box-shadow: 0 14px 30px rgba(10,30,80,0.18);z-index:80;border:0;cursor:pointer;
+    }
+    .wa-fab img{width:26px;height:26px;display:block}
+    /* Responsive */
+    @media (max-width:920px){
+      .hero{grid-template-columns:1fr; padding:24px}
+      .hero-right{order:-1;margin-bottom:12px}
+    }
+    /* simple appear animation */
+    .fade-in{opacity:0;transform:translateY(8px);animation:appear .6s ease forwards}
+    .fade-in.delay-1{animation-delay:.08s}
+    .fade-in.delay-2{animation-delay:.16s}
+    .fade-in.delay-3{animation-delay:.24s}
+    @keyframes appear{to{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <!-- pastikan file logo ada di ./assets/logo.png -->
+        <img src="assets/logo.png" alt="Si Joki Cepat logo" onerror="this.style.display='none'">
+        <div>
+          <div class="title">Si Joki Cepat</div>
+          <small style="color:var(--muted);font-weight:600;font-size:12px">Jasa Joki Tugas — Cepat & Rapi</small>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <nav style="display:flex;align-items:center">
+          <a href="#home">Beranda</a>
+          <a href="#services">Layanan</a>
+          <a href="#order">Pemesanan</a>
+          <a href="#contact">Kontak</a>
+        </nav>
+        <a class="cta" href="#order">Pesan Sekarang</a>
+      </div>
+    </div>
+  </header>
+  <main class="container" id="home">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-left">
+        <h1 id="hero-title" class="fade-in">Butuh Bantuan Tugas? Kami Siap Menyelesaikan Tepat Waktu.</h1>
+        <p class="fade-in delay-1">Jasa pengetikan makalah, pembuatan PPT, pengolahan data, dan laporan keuangan. Hasil rapi, terjamin, dan dapat direvisi ringan.</p>
+        <div class="hero-actions fade-in delay-2">
+          <a href="#order" class="btn-primary">Pesan Sekarang</a>
+          <a href="tel:+6287856141118" class="btn-outline">Hubungi via Telepon</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-illus fade-in delay-3" aria-hidden="true">
+          <!-- Bisa ganti gambar ilustrasi jika mau -->
+          <img src="assets/logo.png" alt="Ilustrasi Si Joki Cepat">
+        </div>
+      </div>
+    </section>
+    <!-- Services -->
+    <section id="services" style="margin-top:18px">
+      <h2 style="color:var(--accent);margin-bottom:14px">Layanan Kami</h2>
+      <div class="services">
+        <article class="card fade-in">
+          <h3>✍️ Pengetikan Makalah</h3>
+          <p>Ketik ulang dokumen, rapi sesuai format kampus (Kop, Daftar Pustaka, Footnote/Endnote).</p>
+          <div class="price">Mulai Rp30.000</div>
+        </article>
+        <article class="card fade-in delay-1">
+          <h3>🎤 Pembuatan PPT</h3>
+          <p>Slide presentasi profesional, visual menarik, dan poin penting yang ringkas.</p>
+          <div class="price">Mulai Rp20.000</div>
+        </article>
+        <article class="card fade-in delay-2">
+          <h3>📊 Pengolahan Data</h3>
+          <p>Pengolahan data Excel, grafik, dan analisis dasar sesuai kebutuhan tugas.</p>
+          <div class="price">Mulai Rp35.000</div>
+        </article>
+        <article class="card fade-in delay-3">
+          <h3>📄 Laporan Keuangan</h3>
+          <p>Susun laporan keuangan sederhana untuk tugas, rapi dan sesuai format akuntansi dasar.</p>
+          <div class="price">Mulai Rp40.000</div>
+        </article>
+      </div>
+    </section>
+    <!-- Why choose -->
+    <section style="margin-top:22px">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap">
+        <div style="flex:1">
+          <h2 style="color:var(--accent)">Mengapa Memilih Kami?</h2>
+          <p style="color:var(--muted)">Kami prioritaskan kecepatan, kualitas, dan komunikasi mudah via WhatsApp. Privasi tugas Anda terjaga.</p>
+          <div class="why" aria-hidden="true">
+            <div class="item fade-in">
+              <div style="font-size:22px">⚡</div>
+              <h4>Cepat & Tepat Waktu</h4>
+              <p>Prioritas pada deadline, garansi pengiriman sesuai waktu.</p>
+            </div>
+            <div class="item fade-in delay-1">
+              <div style="font-size:22px">🧾</div>
+              <h4>Hasil Rapi & Orisinal</h4>
+              <p>Format sesuai standar akademik, tanpa copy-paste seenaknya.</p>
+            </div>
+            <div class="item fade-in delay-2">
+              <div style="font-size:22px">🤝</div>
+              <h4>Komunikasi Mudah</h4>
+              <p>Langsung chat via WhatsApp untuk konfirmasi cepat.</p>
+            </div>
+          </div>
+        </div>
+        <div style="flex-basis:320px"></div>
+      </div>
+    </section>
+    <!-- Order Form (sends to WA) -->
+    <section id="order" style="margin-top:24px">
+      <h2 style="color:var(--accent)">Form Pemesanan Cepat</h2>
+      <p style="color:var(--muted)">Isi data di bawah lalu klik "Kirim ke WhatsApp" — kami akan segera merespons.</p>
+      <div class="card" style="margin-top:12px">
+        <form id="orderForm">
+          <label for="nama">Nama Lengkap</label>
+          <input id="nama" type="text" placeholder="Contoh: Rina" required>
+          <label for="kontak">Nomor Kontak (WhatsApp)</label>
+          <input id="kontak" type="tel" placeholder="Contoh: 0812xxxxxx" required>
+          <label for="jenis">Jenis Layanan</label>
+          <select id="jenis" required>
+            <option value="">Pilih layanan</option>
+            <option value="Pengetikan Makalah">Pengetikan Makalah</option>
+            <option value="Pembuatan PPT">Pembuatan PPT</option>
+            <option value="Pengolahan Data">Pengolahan Data</option>
+            <option value="Laporan Keuangan">Laporan Keuangan</option>
+          </select>
+          <label for="deadline">Deadline</label>
+          <input id="deadline" type="text" placeholder="Contoh: 27 Oktober 2025" required>
+          <label for="catatan">Catatan Tambahan</label>
+          <textarea id="catatan" placeholder="Tulis detail, instruksi dosen, file pendukung, dsb. (opsional)"></textarea>
+          <div class="submit-row">
+            <div style="flex:1">
+              <button id="submitBtn" type="submit" style="width:100%;padding:12px;border-radius:10px;border:0;background:linear-gradient(90deg,var(--accent),#66b0ff);color:white;font-weight:700">
+                Kirim ke WhatsApp
+              </button>
+            </div>
+            <div class="small-note">Nomor WA kami akan menerima pesan berisi data pemesanan</div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Testimonials -->
+    <section id="testimonials" style="margin-top:26px">
+      <h2 style="color:var(--accent)">Testimoni</h2>
+      <div class="testi">
+        <div class="t fade-in">
+          <p>"Makalah selesai dalam 2 hari, rapi formatnya. Recommended!"</p>
+          <span>— Dita, Mahasiswa</span>
+        </div>
+        <div class="t fade-in delay-1">
+          <p>"PPT-nya menarik & to the point. Bantu presentasi jadi lancar."</p>
+          <span>— Reza, Akuntansi</span>
+        </div>
+        <div class="t fade-in delay-2">
+          <p>"Harga terjangkau untuk mahasiswa, respon cepat via WA."</p>
+          <span>— Nia, Manajemen</span>
+        </div>
+      </div>
+    </section>
+    <!-- Contact / info -->
+    <section id="contact" style="margin-top:28px">
+      <h2 style="color:var(--accent)">Kontak & Info</h2>
+      <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:12px">
+        <div class="card">
+          <strong>WhatsApp:</strong><br>
+          <a href="https://wa.me/6287856141118" target="_blank" rel="noreferrer">+62 878-5614-1118</a>
+        </div>
+        <div class="card">
+          <strong>Instagram:</strong><br>
+          <a href="https://instagram.com/si.joki_cepat" target="_blank" rel="noreferrer">@si.joki_cepat</a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      © 2025 Si Joki Cepat. All rights reserved.
+    </footer>
+  </main>
+  <!-- Floating WA button -->
+  <a class="wa-fab" href="https://wa.me/6287856141118" target="_blank" aria-label="Chat via WhatsApp">
+    <!-- icon inline (simple) -->
+    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'><path d='M20.52 3.48A11.94 11.94 0 0012 0C5.373 0 .05 4.95.05 11.07c0 1.95.5 3.86 1.45 5.55L0 24l7.66-2.01A11.98 11.98 0 0012 22.14c6.627 0 11.95-4.95 11.95-11.07 0-2.98-1.16-5.74-3.43-7.59zM12 20.1c-1.27 0-2.48-.33-3.53-.96l-.25-.15-4.55 1.2 1.22-4.37-.15-.28A8.16 8.16 0 013.9 11.07C3.9 6.66 7.64 3.1 12 3.1c4.36 0 8.1 3.56 8.1 7.97S16.36 19.07 12 19.07z'/><path d='M17.2 14.18c-.25-.12-1.47-.72-1.7-.8-.23-.08-.4-.12-.57.12-.17.25-.68.8-.83.96-.15.17-.3.19-.55.06-.25-.12-1.05-.39-2-1.25-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.3.37-.45.12-.15.16-.25.25-.42.08-.17.04-.32-.02-.44-.06-.12-.57-1.37-.78-1.87-.2-.49-.41-.42-.57-.43-.15-.01-.32-.01-.49-.01-.17 0-.44.06-.67.31-.23.25-.85.83-.85 2.03 0 1.2.87 2.36.99 2.52.12.17 1.7 2.6 4.12 3.65 2.42 1.05 2.42.7 2.86.66.44-.05 1.43-.58 1.63-1.14.2-.56.2-1.03.14-1.14-.06-.11-.23-.17-.48-.29z'/></svg>" alt="WhatsApp">
+  </a>
+  <!-- Script: handle form -> wa message -->
+  <script>
+    (function(){
+      const form = document.getElementById('orderForm');
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const nama = document.getElementById('nama').value.trim();
+        const kontak = document.getElementById('kontak').value.trim();
+        const jenis = document.getElementById('jenis').value;
+        const deadline = document.getElementById('deadline').value.trim();
+        const catatan = document.getElementById('catatan').value.trim();
+        // validate basic
+        if(!nama || !kontak || !jenis || !deadline){
+          alert('Mohon lengkapi Nama, Kontak, Jenis Layanan, dan Deadline.');
+          return;
+        }
+        // build message (encode URI)
+        const lines = [
+          'Halo kak, saya mau pesan jasa joki tugas:',
+          'Nama: ' + nama,
+          'Kontak (WA): ' + kontak,
+          'Layanan: ' + jenis,
+          'Deadline: ' + deadline,
+          'Catatan: ' + (catatan || '-')
+        ];
+        const message = encodeURIComponent(lines.join('\\n'));
+        const nomor = '6287856141118'; // nomor tujuan (sudah kamu kasih)
+        const waUrl = `https://wa.me/${nomor}?text=${message}`;
+        // open WA in new tab
+        window.open(waUrl, '_blank');
+      });
+    })();
+  </script>
+</body>
+</html>
